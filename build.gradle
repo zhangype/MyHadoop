@@ -1,0 +1,23 @@
+group 'com.zhangype'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    maven { url 'http://repo.spring.io/snapshot' }
+    maven { url 'http://repo.spring.io/milestone' }
+}
+
+dependencies {
+    compile(
+            "org.apache.hadoop:hadoop-mapreduce-client-common:3.1.1",
+            "org.apache.hadoop:hadoop-mapreduce-client-core:3.1.1",
+            "org.apache.hadoop:hadoop-common:3.1.1",
+            "com.google.guava:guava:23.0"
+    )
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
