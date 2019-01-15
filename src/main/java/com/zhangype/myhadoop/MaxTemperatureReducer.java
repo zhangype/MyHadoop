@@ -7,6 +7,8 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 
 /**
+ * 查找最高气温Reducer
+ *
  * @author danielzhang@webank.com
  * @version V1.0.0
  * @date 2018/10/12
@@ -21,4 +23,5 @@ public class MaxTemperatureReducer extends Reducer<Text, IntWritable, Text, IntW
         }
         context.write(key, new IntWritable(maxValue));
     }
+
 }

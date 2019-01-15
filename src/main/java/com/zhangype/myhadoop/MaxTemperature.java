@@ -10,6 +10,8 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.GenericOptionsParser;
 
 /**
+ * 查找最高气温测试类
+ *
  * @author danielzhang@webank.com
  * @version V1.0.0
  * @date 2018/10/12
@@ -23,7 +25,6 @@ public class MaxTemperature {
         }
 
         Configuration conf = new Configuration();
-//        System.setProperty("hadoop.home.dir", "E:/hadoop/hadoop-2.3.0");
         String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
         if (otherArgs.length != 2) {
             System.err.println("Usage: wordcount <in> <out>");
